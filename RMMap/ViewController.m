@@ -23,6 +23,8 @@
     [locationManager requestAlwaysAuthorization];
     [locationManager requestWhenInUseAuthorization];
     
+    self.mapViewOutlet.showsUserLocation=YES;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -55,10 +57,13 @@
 #pragma mark cllocation delegate methods
 -(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
     
-    NSLog("%@",error.localizedDescription);
+    NSLog(@"%@",error.localizedDescription);
 
 }
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations{
+    
+    CLLocation *currentLocation=locations.lastObject;
+    NSLog(@"Lat:%f Long:%f",currentLocation.coordinate.latitude,currentLocation.coordinate.longitude);
     
     
 }
