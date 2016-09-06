@@ -28,8 +28,11 @@
                                     <segment title="Sattelite"/>
                                     <segment title="Hybrid"/>
                                 </segments>
+                                <connections>
+                                    <action selector="mapTypeAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="iq5-Wd-RKA"/>
+                                </connections>
                             </segmentedControl>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="XMQ-Id-1nf">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XMQ-Id-1nf">
                                 <rect key="frame" x="0.0" y="20" width="600" height="512"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Myg-PU-NNy"/>
@@ -47,6 +50,10 @@
                             <constraint firstItem="rdZ-5P-F99" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="u7j-hX-Ypd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapType" destination="rdZ-5P-F99" id="scb-eZ-vho"/>
+                        <outlet property="mapViewOutlet" destination="XMQ-Id-1nf" id="KT9-1r-VIw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
