@@ -20,8 +20,9 @@
     
     locationManager=[[CLLocationManager alloc]init];
     [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
-    [locationManager requestAlwaysAuthorization];
+//    [locationManager requestAlwaysAuthorization];
     [locationManager requestWhenInUseAuthorization];
+    [locationManager startUpdatingLocation];
     
     self.mapViewOutlet.showsUserLocation=YES;
     
